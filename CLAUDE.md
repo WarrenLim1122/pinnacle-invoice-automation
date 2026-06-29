@@ -16,6 +16,8 @@ Excel finance format: hardcoded = BLUE font, formulas = BLACK.
   why we use local `PyMuPDF`, NOT MinerU — MinerU uploads to its cloud).
 - **Never move/delete the colleague's statement PDFs.** Originals stay in `inbox/`.
   De-duplication is by content hash in `processed_index.json`, not by moving files.
+  Re-do: a freshly (re)dropped PDF force-reprocesses (overwrites its row); startup
+  catch-up still skips already-done files. `run_all_once.py --redo` rebuilds all.
 - Builds on Mac, **runs on Windows**. Keep all code cross-platform (use `pathlib`,
   no hard-coded `/` or `\` paths). The `.bat` files are the Windows entry points.
 
@@ -30,9 +32,11 @@ Excel finance format: hardcoded = BLUE font, formulas = BLACK.
 - `shared/excel_writer.py` — master workbook; blue=hardcoded, black=formula; upsert by filename.
 - `shared/docx_writer.py` — per-bank verification `.docx` (values + add-backs + snapshots).
 - `shared/snapshot.py` — renders a PDF section to PNG. `shared/process.py` — the glue.
-- `output/fees_master.xlsx` — generated. `logs/` — run log + snapshot PNGs.
+- `output/nav_master.xlsx` — generated. `logs/` — run log + snapshot PNGs.
 - `docs/STATEMENT_SPEC_TEMPLATE.md` — how colleague specifies layouts w/o sharing data.
 - `docs/FOR_COLLEAGUE_AI.md` — prompt for her AI to fill Account No (column A).
+- `docs/RULEBOOK.md` — Warren's detailed plain-English playbook (teach-the-colleague).
+- `docs/EMAIL_TO_COLLEAGUE.md` — ready-to-send setup + daily-use email.
 
 ## Runtime / handoff facts
 - Colleague runs on **Windows** → `.bat` launchers (`.command` are Mac, ignored).
@@ -41,6 +45,9 @@ Excel finance format: hardcoded = BLUE font, formulas = BLACK.
 - Outputs are a **DRAFT/staging** area, not her master file. Copy table = the 3-col A:C
   block (Account No | Gross NAV | Net NAV); she pastes into her master as VALUES.
 - `HANDOFF.md` (root) = AI-readable handoff for the colleague.
+- **GitHub (deployment):** public repo `WarrenLim1122/pinnacle-invoice-automation`.
+  Colleague gets it via `git clone` or **Code → Download ZIP** (no account needed,
+  no `.venv` carried). She then runs `setup.bat` to build a fresh Windows `.venv`.
 
 ## Open (see docs/STATUS.md)
 - Validate against real/dummy PDFs (multi-portfolio, multi-page, BoS non-zero liabilities).

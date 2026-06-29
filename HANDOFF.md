@@ -8,12 +8,12 @@ statements (LGT, Bank of Singapore = BoS, UBS) so they don't have to be typed by
 The real/master file lives in another folder. The point of this tool is to **cut the work
 in half**: instead of reading each PDF and typing figures into the master file (then
 re-checking), the colleague:
-1. lets the tool extract the figures into the draft `output/fees_master.xlsx`,
+1. lets the tool extract the figures into the draft `output/nav_master.xlsx`,
 2. **eyeballs once** — compares the draft numbers against the screenshots in the Word
    doc (`banks/<bank>/<bank>_verification.docx`),
 3. then **copy-pastes** the figures from the draft into her master file.
 
-So treat `fees_master.xlsx` / the `.docx` as scratch that gets overwritten each run.
+So treat `nav_master.xlsx` / the `.docx` as scratch that gets overwritten each run.
 
 ## The table she copies = 3 columns
 On every bank tab, the first three columns are exactly:
@@ -53,7 +53,7 @@ because there's no account-number example yet. The next session's job:
 
 > Tell your AI (ChatGPT / Gemini, running on this computer) **where the account number sits
 > on each bank's PDF**, then have it read the account number from each statement and write
-> it into **column A** of the matching row in `output/fees_master.xlsx`. The result is the
+> it into **column A** of the matching row in `output/nav_master.xlsx`. The result is the
 > finished 3-column table: **Account Number | Gross NAV | Net NAV**.
 
 The ready-to-use AI prompt and tips are in **`docs/FOR_COLLEAGUE_AI.md`**.

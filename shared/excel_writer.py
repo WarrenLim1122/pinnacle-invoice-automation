@@ -1,4 +1,4 @@
-"""Owns the master workbook (output/fees_master.xlsx) — one tab per bank.
+"""Owns the master workbook (output/nav_master.xlsx) — one tab per bank.
 
 Finance convention (as requested):
   - HARDCODED values (read straight off the PDF) are BLUE

@@ -53,7 +53,7 @@ against the screenshots, then copy the **3-column block (Account No | Gross NAV 
 columns A:C)** and **Paste Special → Values** into your master file. See `HANDOFF.md`.
 
 ## Where the results are
-- **Excel:** `output/fees_master.xlsx` — one tab per bank, one row per statement.
+- **Excel:** `output/nav_master.xlsx` — one tab per bank, one row per statement.
   - Numbers read off the PDF are **blue** (hardcoded). Calculated cells are **black**
     (formulas) — e.g. LGT's Gross NAV = Net NAV with the negative line items added back.
 - **Word (to eyeball):** `banks/<bank>/<bank>_verification.docx` — the screenshots.

@@ -32,5 +32,15 @@
 - Outputs are a **DRAFT/staging** area, not the master file. The copy-paste table is the
   3-column A:C block (Account No | Gross NAV | Net NAV); paste into master as VALUES.
 
+## Deployment + changes (2026-06-29, session 2)
+- **Live on GitHub, public:** `WarrenLim1122/pinnacle-invoice-automation`. Colleague gets it
+  via `git clone` or Code → Download ZIP (no account/login; `.venv` never carried over).
+- **Renamed** the output workbook `fees_master.xlsx` → `nav_master.xlsx` (config + all docs).
+- **Re-do feature added:** a freshly re-dropped PDF force-reprocesses (overwrites its row);
+  startup catch-up still skips already-done files. `run_all_once.py --redo` rebuilds all.
+  Safe because Excel upserts by filename (one row per PDF, no duplicates).
+- **New docs:** `docs/EMAIL_TO_COLLEAGUE.md` (ready-to-send), `docs/RULEBOOK.md` (detailed
+  teach-from playbook). Decided NOT to rename `banks/` (it is a Python package; left as-is).
+
 ## Open question for Warren
 - (resolved) OS = Windows.

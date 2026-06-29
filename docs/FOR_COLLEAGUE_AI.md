@@ -6,7 +6,7 @@ column (column A) is left blank on purpose, for you to fill using your own AI
 have to leave your machine.
 
 ## What you have
-- `output/fees_master.xlsx` — one tab per bank (LGT / BoS / UBS). Each **row** is one
+- `output/nav_master.xlsx` — one tab per bank (LGT / BoS / UBS). Each **row** is one
   statement, identified by the file name in the **Source PDF** column (D).
 - The original statement PDFs, still sitting in each `banks/<bank>/inbox/` folder.
 
@@ -21,7 +21,7 @@ For each row, read the account number off the matching PDF (the one named in col
 and type it into **column A (Account No)** of that same row.
 
 ## Copy-paste prompt for your AI
-> I have a spreadsheet `fees_master.xlsx` with tabs LGT, BoS and UBS. Each row has a
+> I have a spreadsheet `nav_master.xlsx` with tabs LGT, BoS and UBS. Each row has a
 > "Source PDF" filename in column D and an empty "Account No" in column A. For each row,
 > open the matching PDF in the folder `banks/<TAB NAME>/inbox/`, find the client's
 > **account number** (it appears in the statement header / account-details section), and
