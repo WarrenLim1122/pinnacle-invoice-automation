@@ -22,11 +22,15 @@ echo Creating virtual environment (.venv)...
 python -m venv .venv
 
 echo.
-echo Installing libraries (this needs internet ONCE, only for the libraries -
-echo  your client PDFs are never uploaded anywhere)...
+echo Installing libraries from the bundled 'vendor' folder (no internet needed)...
 call .venv\Scripts\activate.bat
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+python -m pip install --no-index --find-links vendor -r requirements.txt
+if errorlevel 1 (
+    echo.
+    echo  Offline install did not complete - trying the internet as a fallback...
+    echo  ^(This usually means a different Python version. Recommended: Python 3.12.^)
+    python -m pip install -r requirements.txt
+)
 
 echo.
 echo ===================================================================

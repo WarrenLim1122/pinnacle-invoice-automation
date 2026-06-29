@@ -18,8 +18,8 @@ matches the computer it runs on.
 2. Run setup once:
    - **Mac:** double-click **`setup.command`** (first time: right-click → Open → Open).
    - **Windows:** double-click **`setup.bat`**.
-   This installs the software libraries (needs internet once — for the libraries only,
-   never your client files).
+   On Windows the libraries are **bundled in the `vendor/` folder and install offline** —
+   no internet needed. (Recommended Python version: **3.12**; 3.11 and 3.13 also work.)
 
 ## Everyday use — two options
 
@@ -46,6 +46,11 @@ Leave whatever's already in the folders. The tool remembers what it has already 
 (by the file's content), so **old files are never re-processed and nothing is duplicated**.
 Just copy the **new** PDF in; only that new file gets processed. Your original PDFs are
 **never moved or deleted**.
+
+## These outputs are a DRAFT — copy into your master file
+The Excel/Word here are a **staging area**, not the final file. Eyeball the figures once
+against the screenshots, then copy the **3-column block (Account No | Gross NAV | Net NAV,
+columns A:C)** and **Paste Special → Values** into your master file. See `HANDOFF.md`.
 
 ## Where the results are
 - **Excel:** `output/fees_master.xlsx` — one tab per bank, one row per statement.

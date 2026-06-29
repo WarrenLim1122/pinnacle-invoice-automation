@@ -18,10 +18,11 @@ echo "Creating virtual environment (.venv)..."
 python3 -m venv .venv
 source .venv/bin/activate
 
-echo "Installing libraries (needs internet ONCE, only for the libraries -"
-echo " your client PDFs are never uploaded anywhere)..."
-python -m pip install --upgrade pip
-python -m pip install -r requirements.txt
+echo "Installing libraries..."
+# The bundled 'vendor' folder holds Windows wheels. On Mac we install from the
+# internet (only the libraries; your client PDFs are never uploaded anywhere).
+python -m pip install --no-index --find-links vendor -r requirements.txt \
+  || python -m pip install -r requirements.txt
 
 echo ""
 echo "Setup complete. You can now double-click run_watcher.command"

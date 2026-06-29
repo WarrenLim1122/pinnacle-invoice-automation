@@ -10,6 +10,12 @@ have to leave your machine.
   statement, identified by the file name in the **Source PDF** column (D).
 - The original statement PDFs, still sitting in each `banks/<bank>/inbox/` folder.
 
+## The goal
+A finished **3-column table** per bank tab: **Account Number | Gross NAV | Net NAV**.
+Gross/Net are already filled. You only need to add the **Account Number** in column A.
+(This Excel is a draft — once column A is filled, she copies the A:C block, **Paste Special
+→ Values**, into her master file. See `HANDOFF.md`.)
+
 ## The job
 For each row, read the account number off the matching PDF (the one named in column D)
 and type it into **column A (Account No)** of that same row.

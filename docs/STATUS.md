@@ -25,6 +25,12 @@
 ## Deferred (placeholders left in)
 - Email ingestion / more file formats — add a new reader in `shared/readers/`.
 
+## Confirmed / added this session
+- Colleague runs on **Windows** → she uses the `.bat` files (`.command` are Mac, ignored).
+- Offline install: Windows wheels bundled in `vendor/` (covers Python 3.11–3.13 x64);
+  `setup.bat` installs with `--no-index --find-links vendor`. Recommend Python 3.12.
+- Outputs are a **DRAFT/staging** area, not the master file. The copy-paste table is the
+  3-column A:C block (Account No | Gross NAV | Net NAV); paste into master as VALUES.
+
 ## Open question for Warren
-- Which OS does the colleague actually run on — Mac or Windows? (Both are supported; this
-  only changes which launcher + auto-start instructions to point her to.)
+- (resolved) OS = Windows.
