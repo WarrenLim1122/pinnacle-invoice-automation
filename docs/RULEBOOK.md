@@ -154,12 +154,10 @@ If she accidentally deletes rows in the Excel and wants them back, there are two
 in. A freshly dropped file is treated as "do this again," so the row gets rebuilt. (This was a
 deliberate change. Before, the tool would have skipped a file it had already seen.)
 
-**The bulk way (for Warren or power use):** run `python run_all_once.py --redo`, which rebuilds
-every row from whatever PDFs are still in the inboxes, even ones already done.
+**The bulk way (for Warren or power use):** run `python run_all_once.py --redo`, which rebuilds every row from whatever PDFs are still in the inboxes, even ones already done.
 
 > [!note] Why re-doing is safe
-> Each PDF maps to one row by its filename, so re-doing overwrites that same row rather than
-> creating a duplicate. You cannot end up with the same statement counted twice.
+> Each PDF maps to one row by its filename, so re-doing overwrites that same row rather than creating a duplicate. You cannot end up with the same statement counted twice.
 
 ## 9. Stopping and starting
 
