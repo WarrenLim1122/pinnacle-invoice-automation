@@ -19,7 +19,7 @@
 3. Drop PDFs into `banks\LGT\inbox\`, `banks\BoS\inbox\`, `banks\UBS\inbox\`.
 4. Results: `output\fees_master.xlsx` (3-col A:C to copy) + `banks\<bank>\<bank>_verification.docx` (screenshots to eyeball once).
 5. No need to delete old files — content-hash de-dup skips them; only new drops process.
-- **Auto-start at boot:** put a shortcut to `run_watcher.bat` in the Startup folder (`Win+R` → `shell:startup`). Steps in `README_WINDOWS.md`. The `.command` files are Mac equivalents — she ignores them.
+- **Auto-start at boot:** put a shortcut to `run_watcher.bat` in the Startup folder (`Win+R` → `shell:startup`). Steps in `README.md` ("Make it auto-start when you log in") and `HANDOFF.md`. The `.command` files are Mac equivalents — she ignores them.
 
 ## Next actions (tomorrow)
 1. **Account numbers** — the main open task. Either: (a) colleague tells her AI (ChatGPT/Gemini, on her PC) where the account number sits on each bank PDF and fills column A using the prompt in `docs/FOR_COLLEAGUE_AI.md`; or (b) she tells Warren where it sits and we add it to the Python parsers (then the AI step disappears). Goal = finished 3-col table Account No | Gross NAV | Net NAV.
